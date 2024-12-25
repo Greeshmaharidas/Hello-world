@@ -1,0 +1,136 @@
+@import '../abstracts/variable.scss';
+
+.primary_bttn {
+    background-color: $primary_color;
+    color: $white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.primary_bttn:disabled {
+    background-image: linear-gradient(to right, #bbbcbd, #838485);
+    border: 1px solid #838485;
+}
+
+.primary_bttn:active,
+.active_bttn {
+    background: $primary_color;
+    background-image: linear-gradient(135deg,
+            #ffffff28 10%,
+            #fcfbf900 10%,
+            #fcfbf900 20%,
+            #ffffff28 20%,
+            #ffffff28 30%,
+            #fcfbf900 30%,
+            #fcfbf900 40%,
+            #ffffff28 40%,
+            #ffffff28 50%,
+            #fcfbf900 50%,
+            #fcfbf900 60%,
+            #ffffff28 60%,
+            #ffffff28 70%,
+            #fcfbf900 70%,
+            #fcfbf900 80%,
+            #ffffff28 80%,
+            #ffffff28 90%,
+            #fcfbf900 90%,
+            #fcfbf900 100%,
+            #ffffff28 100%) !important;
+    animation: slidebg 10s linear infinite;
+    background-size: 100px 25px;
+}
+
+.round_bttn {
+    height: 40px;
+    padding: 10px 19px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    transition-duration: 0.4s;
+    background: $primary_color;
+    color: #fff;
+    text-transform: uppercase;
+    outline: 0;
+    border: 1px solid $primary_color;
+    min-width: 100px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.round_bttn:disabled {
+    background-image: linear-gradient(to right, #bbbcbd, #838485);
+    border: 1px solid #838485;
+}
+
+.pill-btn {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    padding: 7px 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: "UmrahFont";
+
+    span {
+        color: #187477;
+        font-family: "UmrahFont";
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .icon {
+        color: #187477;
+    }
+}
+
+.linkstyle {
+    position: relative;
+    text-decoration: none;
+    color: $primary_color;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+
+    &::before {
+        content: "";
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        background: $primary_color;
+    }
+
+    &::after {
+        content: "";
+        left: 0;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        position: absolute;
+        background: $secondary_color;
+    }
+
+    &:hover {
+        color: $secondary_color !important;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}

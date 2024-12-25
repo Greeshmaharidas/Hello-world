@@ -1,0 +1,423 @@
+@import '../../../assets/styles/layout/layout';
+
+.main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+
+    .content {
+        display: block;
+        width: 60%;
+        padding-block: 1rem;
+        padding-inline: 5rem 2rem;
+
+        &-section {
+            margin-bottom: 40px;
+
+            .main-head {
+
+                h3 {
+                    font-size: 40px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                span {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.3;
+                }
+
+                .design-for-life {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .icon-circle {
+                        width: 30px;
+                        height: 30px;
+                        background-color: #FF9257;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .icon-image {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+
+            .sub-head {
+                font-size: 1rem;
+                color: #666;
+                line-height: 1.5;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .review-count {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .count {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: black
+                }
+
+                .text {
+                    font-size: 1rem;
+                    color: #555;
+                    text-align: center;
+                }
+            }
+
+            .students {
+                .students-image {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                .students-image:not(:first-child) {
+                    margin-left: -22px;
+                }
+            }
+        }
+
+        .book-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 20px;
+
+            .pill-btn {
+                padding: 15px 25px;
+                background-color: #2F584E;
+                color: white;
+                border: none;
+                border-radius: 30px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #162b26;
+                }
+            }
+
+            .play {
+                display: flex;
+                align-items: center;
+
+                .music {
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    font-size: 1rem;
+                    color: black;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-desk {
+        background-color: #FF9257;
+        position: absolute;
+        width: 100%;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        bottom: 0;
+        width: 60%;
+        padding-inline: 5rem 2rem;
+        padding-block: 1.5rem;
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .footer-column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                position: relative;
+
+                .count {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                .text {
+                    font-size: 1rem;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -10px;
+                    top: 0;
+                    bottom: 0;
+                    width: 2px;
+                    background-color: #F7BE2C;
+                }
+            }
+        }
+    }
+
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 40%;
+        background-color: #c5d8f773;
+        background-image: url('../../../assets/images/Vector.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        padding-inline: 1rem;
+        padding-top: 2rem;
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 20px;
+            gap: 3rem;
+
+            .image {
+                width: calc(40% - 10px);
+                margin: 0 5px;
+                border-radius: 5px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .image:first-child {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .footer-mob{
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .content {
+            width: 80%;
+            padding: 15px;
+
+            &-section {
+                .main-head {
+                    flex-direction: column;
+
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+
+                    .design-for-life {
+                        font-size: 1rem;
+
+                        .icon-circle {
+                            width: 30px;
+                            height: 30px;
+
+                            .icon-image {
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .sub-head {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+
+            .image-row {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .image {
+                    width: calc(50% - 10px);
+                    margin: 0 5px;
+                    border-radius: 5px;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        .footer-mob{
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .content {
+            width: 100%;
+            padding: 10px;
+
+            &-section {
+                .main-head {
+                    h1 {
+                        font-size: 1.2rem;
+                    }
+
+                    .design-for-life {
+                        font-size: 0.9rem;
+                    }
+                }
+
+                .sub-head {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .review {
+                .review-count {
+                    .count {
+                        font-size: 1.5rem;
+                    }
+
+                    .text {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .students {
+                    .students-image {
+                        height: 50px;
+                        width: 50px;
+                    }
+
+                    .students-image:not(:first-child) {
+                        margin-left: -22px;
+                    }
+                }
+            }
+
+            .book-container {
+                .pill-btn {
+                    padding: 8px 16px;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+
+            .image-row {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .image {
+                    width: calc(50% - 10px);
+                    margin: 0 5px;
+                    border-radius: 5px;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        .footer-mob {
+            display: block;
+            background-color: #FF9257;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            bottom: 0;
+            padding: 1rem;
+            width: 100%;
+
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                .footer-column {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: white;
+                    position: relative;
+    
+                    .count {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+    
+                    .text {
+                        font-size: 1rem;
+                    }
+    
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: -10px;
+                        top: 0;
+                        bottom: 0;
+                        width: 2px;
+                        background-color: #F7BE2C;
+                    }
+                }
+            }
+        }
+
+        .footer-desk{
+            display: none;
+        }
+    }
+
+}
